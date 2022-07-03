@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>Menu</h4>
+  <hr />
+  <div class="row">
+    <div class="col-sm-3" *ngFor="let dish of dishes">
+      <a href="">
+        <div class="card">
+          <img
+            src="{{ dish.image }}"
+            class="card-img-top"
+            alt="{{ dish.name }}"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ dish.name | uppercase }}</h5>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <app-dishdetail></app-dishdetail>
+</div>

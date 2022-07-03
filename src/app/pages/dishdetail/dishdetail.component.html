@@ -1,8 +1,31 @@
-<h3>Dish Details</h3>
-<div class="mt-2">
-  <p>Display the details of the Dish here</p>
-</div>
-
-<div class="mt-2">
-  <p>Display the list of comments here</p>
+<div class="row mt-4">
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-body">
+        <h4>{{ dish.name | uppercase }}</h4>
+        <img
+          src="{{ dish.image }}"
+          class="card-img-top"
+          alt="{{ dish.name }}"
+        />
+        <p class="mt-3">
+          {{ dish.description }}
+        </p>
+        <div class="mt-4">
+          <a href="#" class="btn btn-outline-secondary btn-sm">Like</a>
+          <a href="#" class="btn btn-outline-secondary btn-sm mx-2">Share</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-8">
+    <h4>Comments</h4>
+    <div class="card mb-3" *ngFor="let comment of dish.comments">
+      <div class="card-body">
+        <p class="m-0">{{ comment.comment }}</p>
+        <p class="m-0">{{ comment.rating }} stars</p>
+        <p class="m-0">-- {{ comment.author }} {{ comment.date | date }}</p>
+      </div>
+    </div>
+  </div>
 </div>

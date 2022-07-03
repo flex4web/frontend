@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-sm-3" *ngFor="let l of leader">
+    <div class="card">
+      <img src="{{ l.image }}" class="card-img-top" alt="{{ l.name }}" />
+      <div class="card-body">
+        <h5 class="card-title">{{ l.name }}</h5>
+        <P>{{ l.designation }}</P>
+        <P>{{ l.abbr }}</P>
+        <P>{{ l.featured }}</P>
+        <P>{{ l.description }}</P>
+      </div>
+    </div>
+  </div>
+</div>

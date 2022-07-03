@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="col-sm-3" *ngIf="leaders">
+    <div class="card">
+      <img
+        src="{{ leaders.image }}"
+        class="card-img-top"
+        alt="{{ leaders.name }}"
+      />
+      <div class="card-body">
+        <h5 class="card-title">{{ leaders.name }}</h5>
+        <P>{{ leaders.designation }}</P>
+        <P>{{ leaders.abbr }}</P>
+        <P>{{ leaders.featured }}</P>
+        <P>{{ leaders.description }}</P>
+      </div>
+    </div>
+  </div>
+</div>
